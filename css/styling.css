@@ -1,0 +1,160 @@
+/* start variables */
+:root{
+    --main-color: #272b30;
+    --main-transition: .5s;
+}
+/* end variables */
+/* start global rules */
+body{
+    font-family: 'Comfortaa', cursive;
+    background-color: var(--main-color);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Nerko One", cursive;
+    font-weight: light;
+}
+/* end global rules */
+/* start header */
+header img{
+    object-fit: cover;
+    vertical-align: middle;
+}
+/* end header */
+/* start navbar */
+.navbar{
+    background-color: rgb(58, 73, 123) !important;
+    z-index: 9;
+    width: 75%;
+    margin-top: -35px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 8px 0 rgb(0,0,0,.6);
+}
+@media(min-width: 768px) and (max-width: 989px){
+    .navbar{
+        width: 50%;
+    }
+}
+@media(max-width: 767px){
+    .navbar{
+        width: 100%;
+    }
+}
+.navbar .navbar-brand{
+    Font-size: 20px;
+}
+.navbar .nav-link{
+    font-size: 12px;
+    transition: var(--main-transition);
+}
+.navbar .nav-link:hover{
+    color: #09c !important;
+}
+.navbar .nav-link.active{
+    color: #09c;
+}
+/* end navbar */
+/* start games box */
+.boxes .card{
+    background-color: var(--main-color);
+    transition:all var(--main-transition);
+    cursor: pointer;
+}
+.boxes .card:hover{
+    transform: scale(1.1);
+}
+.boxes img,
+.boxes .content span,
+.boxes .card-footer a{
+    filter: grayscale(.7);
+    transition: var(--main-transition);
+}
+.boxes .card:hover img,
+.boxes .card:hover span,
+.boxes .card:hover a{
+    filter: grayscale(0);
+}
+.boxes .card-body p{
+    font-size: 12px;
+}
+.boxes .card-footer a{
+    font-size: 10.5px;
+    background-color: #32383e;
+}
+/* end games box */
+ /* start details section */
+.details h1{
+    font-size: 25px;
+    font-weight: 300;
+}
+.details .icon{
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+}
+.details h2{
+    font-size: 26px;
+}
+.details p{
+    font-size: 13px;
+}
+ /* end details section */
+ /* start loading */
+.loading{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(39, 43, 48,.7);
+    z-index: 99;
+    display: flex;
+    overflow: hidden;
+}
+.loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 40%;
+    position: relative;
+    animation: rotate 1s linear infinite
+}
+.loader::before,
+.loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    animation: prixClipFix 2s linear infinite;
+}
+.loader::after {
+    border-color: #FF3D00;
+    animation: prixClipFix 2s linear infinite, rotate 0.5s linear infinite reverse;
+    inset: 6px;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+@keyframes prixClipFix {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+    }
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+    }
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+    }
+    75% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+    }
+    100% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+    }
+}
+ /* end loading */

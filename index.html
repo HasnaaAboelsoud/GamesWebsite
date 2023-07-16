@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website Games</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nerko+One&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- bootstrap file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="css/styling.css">
+</head>
+<body>
+    <!-- start game section -->
+    <div class="games">
+        <header id="header">
+            <img src="image/wraper.png" width="100%" height="220px" alt="wraper photo">
+        </header>
+        <nav class="navbar navbar-expand-lg position-sticky top-0 mx-auto">
+            <div class="container">
+                <h5 class="navbar-brand text-uppercase text-white mb-0 fw-lighter" >
+                    <img src="image/logo-sm.png" alt="Logo" class="d-inline-block align-text-middle" width="45px">
+                    Game Reviews
+                </h5>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" data-ca="Mmorpg">Mmorpg</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" data-ca="shooter">shooter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" data-ca="Sailing">Sailing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" data-ca="permadeath">permadeath</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" data-ca="superhero">superhero</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" data-ca="pixel">pixel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="boxes mt-5">
+            <div class="container pt-1">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end game section -->
+    <!-- start details section -->
+    <div class="details text-white position-relative px-3 d-none">
+        <div class="container-fluid">
+            <h1 class="fw-light my-4">Details Game</h1>
+            <div class="icon position-absolute text-white-50">
+                <i class="fas fa-xmark fs-4"></i>
+            </div>
+            <div class="row" id="rowDetails">
+            </div>
+        </div>
+    </div>
+    <!-- end details section -->
+    <!--start loading -->
+    <div class="loading justify-content-center align-items-center">
+        <span class="loader"></span>
+    </div>
+    <!--end loading -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script>
+    $("html").niceScroll({
+        cursoropacitymin: .4,
+        cursorcolor: "#272b30",
+        cursorwidth:"11px",
+        cursorborder:"1px solid #272b30",
+        background: "#32383e",
+        autohidemode:false,
+        cursorminheight: 25,
+        scrollspeed: 300,
+        mousescrollstep: 8 * 5,
+        cursordragspeed: 0.8,
+    });
+    </script>
+    <script src="js/index.js"></script>
+</body>
+</html>
